@@ -178,10 +178,8 @@ function renderFragment(name, props, children, stack) {
       }
     }
 
-    if (voidElements.has(name)) {
-      out += '/>'
-    } else {
-      out += '>'
+    out += '>'
+    if (!voidElements.has(name)) {
       footer = '</' + name + '>'
     }
   }

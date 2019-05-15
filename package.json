@@ -1,9 +1,9 @@
 {
   "private": true,
-  "name": "hyperapp-render",
-  "version": "3.1.0",
+  "name": "@kickscondor/hyperapp-render",
+  "version": "3.1.2",
   "description": "Render Hyperapp to an HTML string with SSR and Node.js streaming support",
-  "repository": "kriasoft/hyperapp-render",
+  "repository": "kickscondor/hyperapp-render",
   "author": "Vladimir Kutepov",
   "license": "MIT",
   "keywords": [

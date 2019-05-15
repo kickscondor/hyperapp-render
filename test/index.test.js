@@ -269,7 +269,7 @@ describe('attributes', () => {
   })
   it('should render boolean attribute', () => {
     const html = renderToString(<input checked />)
-    expect(html).toBe('<input checked/>')
+    expect(html).toBe('<input checked>')
   })
 
   it('should render attribute with empty string value', () => {
@@ -369,7 +369,7 @@ describe('renderer(view, state, actions)(bytes)', () => {
       </div>,
     )
     expect(read(1)).toBe('<div>')
-    expect(read(1)).toBe('<input/>')
+    expect(read(1)).toBe('<input>')
     expect(read(1)).toBe('</div>')
   })
 
@@ -393,7 +393,7 @@ describe('renderToString(view, state, actions)', () => {
 
   it('should render markup for self-closing tags', () => {
     const html = renderToString(<input />)
-    expect(html).toBe('<input/>')
+    expect(html).toBe('<input>')
   })
 
   it('should render empty markup for components which return null', () => {
@@ -435,7 +435,7 @@ describe('renderToString(view, state, actions)', () => {
         <link />
       </Fragment>,
     )
-    expect(html).toBe('<meta/><link/>')
+    expect(html).toBe('<meta><link>')
   })
 
   it('should render raw html without extra markup', () => {
@@ -446,7 +446,7 @@ describe('renderToString(view, state, actions)', () => {
 
   it('should render an array of elements', () => {
     const html = renderToString([<meta />, <link />])
-    expect(html).toBe('<meta/><link/>')
+    expect(html).toBe('<meta><link>')
   })
 
   it('should support Hyperapp V2', () => {
